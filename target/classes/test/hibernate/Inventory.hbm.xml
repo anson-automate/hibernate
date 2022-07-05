@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="test.bean.Inventory" table="inventory" catalog="app">
+        <id name="Id" type="java.lang.Long">
+            <column name="Id" />
+            <generator class="identity" />
+        </id>
+        <property name="productName" type="string">
+            <column name="productName" length="30"/>
+        </property>
+        <property name="quantity" type="integer">
+            <column name="quantity" />
+        </property>
+        <property name="productPrice" type="float">
+            <column name="productPrice" />
+        </property>
+    </class>
+</hibernate-mapping>
